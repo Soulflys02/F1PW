@@ -1,0 +1,143 @@
+/* Global */
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* Header */
+.main-header{
+    position: fixed;
+    display: flex;
+    background-color: #e10600;
+    width: 100%;
+    z-index: 1;
+}
+.main-header nav{
+    display: inherit;
+    width: 90%;
+    margin: auto;
+}
+.main-header h1{
+    display: inherit;
+    align-items: center;
+    font-size: 36px;
+    font-weight: bold;
+    color: #fff;
+    margin-block: 5px;
+}
+.main-header ul{
+    display: inherit;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-left: 5%;
+    list-style: none;
+}
+.main-header li{
+    display: inherit;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.main-header a{
+    display: inherit;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+    height: 100%;
+    padding-inline: 15px;
+}
+.main-header a:hover{
+    background-color: #15151e;
+    transition: 0.3s;
+}
+.main-header span{
+    position: relative;
+    top: 3px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #fff;
+}
+/* Page-body */
+.page-body{
+    position: relative;
+    top: 52px;
+}
+/* Body header */
+.page-body .body-header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    background-image: url(../Image/F1-background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
+.page-body .body-header h1{
+    color: #fff;
+    font-size: 38px;
+    animation: slideUp 1s;
+}
+/* Avaibility area */
+.page-body .track-availability{
+    display: flex;
+    margin: 50px;
+}
+.page-body .track-availability fieldset{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    border-left: 0px;
+    border-top: 10px solid #e10600;
+    border-right: 10px solid #e10600;
+    border-bottom: 10px solid #e10600;
+    border-radius: 10px;
+    height: 100%;
+}
+.page-body .track-availability fieldset legend{
+    padding-right: 10px;
+    font-size: 28px;
+}
+.page-body .track-availability fieldset div.track-container{
+    align-items: center;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    display: flex;
+}
+.track-availability fieldset img{
+    width: 60px;
+}
+.track-availability fieldset div.text-area{
+    display: flex;
+    height: 97%;
+    flex-direction: column;
+    padding-inline: 5px;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom-right-radius: 10px;
+}
+.track-availability fieldset div.text-area:hover{
+    border-color: #e10600;
+}
+.track-availability fieldset h2{
+    display: block;
+    font-size: 18px;
+    font-weight: normal;
+}
+.track-availability fieldset p{
+    font-size: 12px;
+}
+/* Animations */
+@keyframes slideUp {
+    from{
+        transform: translateY(200px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
