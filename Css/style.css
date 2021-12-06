@@ -4,6 +4,25 @@
     padding: 0px;
     font-family: Arial, Helvetica, sans-serif;
 }
+h1{
+    font-size: 3em;
+    font-weight: bold;
+}
+h2{
+    font-size: 2em;
+    font-weight: normal;
+}
+h3{
+    font-size: 1.5em;
+    font-weight: normal;
+}
+p{
+    font-size: 1em;
+}
+div.normal{
+    padding-inline: 5%;
+    padding-block: 50px;
+}
 /* Header */
 .main-header{
     position: fixed;
@@ -20,8 +39,6 @@
 .main-header h1{
     display: inherit;
     align-items: center;
-    font-size: 36px;
-    font-weight: bold;
     color: #fff;
     margin-block: 5px;
 }
@@ -44,7 +61,7 @@
     justify-content: center;
     align-items: center;
     color: #fff;
-    font-size: 18px;
+    font-size: 1.2em;
     text-decoration: none;
     height: 100%;
     padding-inline: 15px;
@@ -59,13 +76,19 @@
     padding-bottom: 5px;
     border-bottom: 2px solid #fff;
 }
-/* Page-body */
-.page-body{
-    position: relative;
-    top: 52px;
+/* Footer */
+.main-footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    background-color: #15151e;
+    color: #fff;
 }
 /* Body header */
-.page-body .body-header{
+.body-header{
+    position: relative;
+    top: 65px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -76,59 +99,247 @@
     background-repeat: no-repeat;
     background-position: center bottom;
 }
-.page-body .body-header h1{
+.body-header h1{
     color: #fff;
-    font-size: 38px;
     animation: slideUp 1s;
 }
-/* Avaibility area */
-.page-body .track-availability{
-    display: flex;
-    margin: 50px;
+/* Page-body */
+.page-body{
+    position: relative;
+    top: 65px;
 }
-.page-body .track-availability fieldset{
+/* Avaibility area */
+.track-availability{
     display: flex;
+}
+.track-availability fieldset{
+    display: inherit;
     flex-wrap: wrap;
+    justify-content: center;
     width: 100%;
     border-left: 0px;
     border-top: 10px solid #e10600;
     border-right: 10px solid #e10600;
     border-bottom: 10px solid #e10600;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding-bottom: 10px;
+}
+.track-availability fieldset legend h2{
+    padding-right: 10px;
+}
+.track-container{
+    display: inherit;
+    flex: 1 1 33%;
+}
+.track-container a{
+    display: inherit;
+    color: black;
+    margin: 10px;
+    text-decoration: none;
+    height: 60px;
+    width: 100%;
+    transition: 0.3s;
+}
+.track-container a:hover{
+    height: 65px;
+    transition: 0.3s;
+    margin: 5px;
+}
+div.track-container img{
+    display: inherit;
+    border: 1px solid black;
     border-radius: 10px;
     height: 100%;
 }
-.page-body .track-availability fieldset legend{
-    padding-right: 10px;
-    font-size: 28px;
-}
-.page-body .track-availability fieldset div.track-container{
-    align-items: center;
-    margin-bottom: 5px;
-    margin-right: 5px;
-    display: flex;
-}
-.track-availability fieldset img{
-    width: 60px;
-}
-.track-availability fieldset div.text-area{
-    display: flex;
-    height: 97%;
+div.text-area{
+    display: inherit;
     flex-direction: column;
-    padding-inline: 5px;
+    justify-content: center;
     border-bottom: 1px solid black;
     border-right: 1px solid black;
     border-bottom-right-radius: 10px;
+    height: calc(100% + 1px);
+    width: 100%;
 }
-.track-availability fieldset div.text-area:hover{
+a:hover div.text-area{
     border-color: #e10600;
 }
-.track-availability fieldset h2{
-    display: block;
-    font-size: 18px;
-    font-weight: normal;
+.text-area h3{
+    display: inherit;
+    justify-content: center;
 }
-.track-availability fieldset p{
-    font-size: 12px;
+.text-area p img{
+    display: inherit;
+    height: 10px;
+    margin-right: 5px;
+    border: 0px;
+}
+.text-area p{
+    display: inherit;
+    justify-content: center;
+    align-items: center;
+}
+/* Site Goals */
+.explanation-container{
+    height: 400px;
+    display: flex;
+}
+.explanation-container div{
+    width: 50%;
+}
+.goals-img, .goals-img-2{
+    background-image: url(../Image/Site-Goals-img.png);
+    background-size: cover;
+    background-position: center;
+}
+.goals-img-2{
+    background-image: url(../Image/Site-goals-2.png);
+}
+.goals-txt{
+    display: inherit;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #15151e;
+}
+.goals-txt fieldset{
+    border: 0px;
+    border-top: 1px solid #e10600;
+    margin-inline: 10%;
+}
+.goals-txt legend{
+    width: auto;
+    padding-inline: 20px;
+    margin-inline: auto;
+    margin-bottom: 10%;
+}
+.goals-txt h2{
+    color: #fff;
+}
+.goals-txt p{
+    color: #fff;
+    text-align: justify;
+}
+/* Contact form */
+.contact-container, .contact-header, .contact-body, .contact-footer{
+    display: flex;
+    justify-content: center;
+}
+.contact-div{
+    width: 60%;
+    box-shadow: 0px 0px 5px black;
+    border-radius: 10px;
+}
+.contact-form{
+    flex-direction: column;
+    align-items: center;
+    margin-inline: 5%;
+}
+.contact-error{
+    font-size: 1em;
+    margin-top: 5px;
+    color: #e10600;
+}
+.contact-header{
+    padding-block: 20px;
+    border-bottom: 1px solid #e10600;
+}
+.contact-body{
+    padding-block: 20px;
+}
+.left-body, .right-body{
+    width: 50%;
+}
+.left-body{
+    margin-right: 30px;
+}
+.field-box{
+    display: flex;
+    flex-direction: column;
+}
+.left-body .field-box{
+    margin-bottom: 20px;
+}
+.field-box label{
+    font-size: 1.5em;
+    padding-bottom: 5px;
+}
+.field-box input{
+    width: 100%;
+    height: 30px;
+    font-size: 1em;
+    outline: none;
+    border: 1px solid black;
+    border-radius: 5px;
+    transition: 0.3s;
+    padding-left: 25px;
+    padding-right: 5px;
+}
+.field-box input:focus{
+    border: 1px solid #e10600;
+    height: 35px;
+    transition: 0.3s;
+    margin-block: -2.5px;
+    
+}
+#last-field{
+    margin-bottom: 0px;
+}
+.field-box div{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.field-box div i{
+    display: flex;
+    justify-content: center;
+    color: #e10600;
+    position: absolute;
+    margin-left: 5px;
+}
+
+.right-body .field-box{
+    height: 100%;
+}
+.field-box textarea{
+    height: 100%;
+    resize: none;
+    font-size: 1em;
+    padding-inline: 5px;
+    padding-top: 10px;
+    outline: none;
+    border: 2px solid #15151e;;
+    border-radius: 5px;
+    background-color: #e4e1e1;
+}
+.contact-footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-block: 20px 40px;
+}
+.contact-footer button{
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    background-color: #15151e;
+    color: #fff;
+    font-size: 1em;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.contact-footer button:hover{
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+.contact-footer .contact-success{
+    font-size: 1em;
+    padding-top: 20px;
+    color: green;
 }
 /* Animations */
 @keyframes slideUp {
