@@ -78,12 +78,47 @@ div.normal{
 }
 /* Footer */
 .main-footer{
+    background-color: #15151e;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+}
+.footer-top, .footer-mid, .footer-bottom{
+    width: 70%;
+}
+.footer-top{
+    padding-block: 50px 30px;
+    border-bottom: 1px solid #e10600;
+}
+.footer-top h3{
+    display: flex;
+    justify-content: center;
+}
+.footer-mid{
+    display: flex;
+    justify-content: center;
+    padding-block: 30px;
+    width: 40%;
+}
+.mid-container{
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 300px;
-    background-color: #15151e;
-    color: #fff;
+    width: 100%;
+    margin-inline: 20px;
+}
+.mid-container img{
+    height: 40px;
+    margin-bottom: 10px;
+}
+.footer-bottom{
+    display: flex;
+    justify-content: center;
+    padding-block: 0px 50px;
+    color: #cacaca;
+    font-size: 0.8em;
 }
 /* Body header */
 .body-header{

@@ -387,9 +387,29 @@
                     unset($_SESSION['success']);
                 ?>
             </div>
+            <!----------------------------- Footer ----------------------------->
             <footer class="main-footer">
-                <div class="fullscreen">
-                    C'est un footer mais jsp quoi mettre dedans
+                <div class="footer-top">
+                    <h3>F1 Pit Wall</h3>
+                </div>
+                <div class="footer-mid">
+                    <div class="mid-container">
+                        <img src="Image/email.png" alt="logo d'enveloppe">
+                        <p>
+                            f1pitwall.official@gmail.com
+                        </p>
+                    </div>
+                    <div class="mid-container">
+                        <img src="Image/discord.png" alt="logo de discord">
+                        <p>
+                            Soulflys#8823
+                        </p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>
+                        Created and designed by Soulflys
+                    </p>
                 </div>
             </footer>
         </div>
